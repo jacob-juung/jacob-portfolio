@@ -1,0 +1,14 @@
+{
+  "company": "software-agency",
+  "role": "Full Stack Developer",
+  "periodStart": "2015.03",
+  "periodEnd": "2017.05",
+  "description": "Developed web and mobile applications for enterprise clients, focusing on gaming and entertainment projects.",
+  "skills": ["React", "Node.js", "TypeScript", "AWS"],
+  "highlights": [
+    "Delivered 10+ client projects",
+    "Reduced deployment time by 60%",
+    "Mentored 5 junior developers"
+  ],
+  "sortOrder": 3
+}

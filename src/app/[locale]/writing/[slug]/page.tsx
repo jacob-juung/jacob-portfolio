@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getPostBySlug, getAdjacentPosts, getAllPosts } from "@/lib/blog";
+import { getPostBySlug, getAdjacentPosts, getAllPosts } from "@/lib/content";
 import { getTableOfContents } from "@/lib/toc";
 import { MDXContent } from "@/lib/mdx";
 import { getTranslations } from "next-intl/server";
@@ -11,21 +11,21 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug, locale } = await params;
   const t = await getTranslations("writing");
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
 
   if (!post || !post.published) {
     notFound();
   }
 
   const toc = await getTableOfContents(post.content);
-  const { prev, next } = getAdjacentPosts(slug);
+  const { prev, next } = await getAdjacentPosts(slug);
 
   return (
     <div className="py-8">
@@ -42,7 +42,7 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
 
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">
-            {post.title}
+            {post.title.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
           </h1>
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-text-tertiary mb-6">
@@ -86,7 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
               >
                 <span className="text-xs text-text-tertiary">{t("prevPost")}</span>
                 <p className="text-sm font-medium text-text-primary group-hover:text-accent transition-colors mt-1 line-clamp-1">
-                  {prev.title}
+                  {prev.title.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
                 </p>
               </Link>
             ) : (
@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: Props) {
               >
                 <span className="text-xs text-text-tertiary">{t("nextPost")}</span>
                 <p className="text-sm font-medium text-text-primary group-hover:text-accent transition-colors mt-1 line-clamp-1">
-                  {next.title}
+                  {next.title.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
                 </p>
               </Link>
             ) : (

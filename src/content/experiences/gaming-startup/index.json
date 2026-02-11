@@ -1,0 +1,14 @@
+{
+  "company": "gaming-startup",
+  "role": "Head of Business Development",
+  "periodStart": "2020.01",
+  "periodEnd": "2023.02",
+  "description": "Drove strategic partnerships and M&A activities, scaling the company from Series A to successful exit.",
+  "skills": ["M&A", "Biz-Dev", "Partnerships", "Strategy"],
+  "highlights": [
+    "Executed 3 strategic acquisitions",
+    "Grew revenue 5x through partnerships",
+    "Led Series B fundraising ($30M)"
+  ],
+  "sortOrder": 1
+}

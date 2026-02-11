@@ -1,9 +1,9 @@
-import { getAllPosts, getAllTags } from "@/lib/blog";
+import { getAllPosts, getAllTags } from "@/lib/content";
 import { WritingPageClient } from "./client";
 
-export default function WritingPage() {
-  const posts = getAllPosts();
-  const allTags = getAllTags();
+export default async function WritingPage() {
+  const posts = await getAllPosts();
+  const allTags = await getAllTags();
 
   return <WritingPageClient posts={posts} allTags={allTags} />;
 }

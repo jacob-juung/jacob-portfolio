@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts } from "@/lib/content";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jacob.dev";
 

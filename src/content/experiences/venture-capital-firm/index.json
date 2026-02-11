@@ -1,0 +1,14 @@
+{
+  "company": "venture-capital-firm",
+  "role": "Partner",
+  "periodStart": "2023.03",
+  "periodEnd": "",
+  "description": "Leading investments in gaming and AI startups, focusing on early-stage companies at the intersection of entertainment and technology.",
+  "skills": ["VC", "Due Diligence", "Portfolio Management", "AI/Gaming"],
+  "highlights": [
+    "Led 10+ investments in gaming and AI startups",
+    "Built network of 50+ gaming industry founders",
+    "Developed proprietary deal sourcing framework"
+  ],
+  "sortOrder": 0
+}

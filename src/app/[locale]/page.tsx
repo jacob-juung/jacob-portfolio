@@ -1,7 +1,7 @@
-"use client";
-
 import { Hero } from "@/components/hero";
+import { getHero } from "@/lib/content";
 
-export default function Home() {
-  return <Hero />;
+export default async function Home() {
+  const heroData = await getHero();
+  return <Hero data={heroData} />;
 }

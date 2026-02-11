@@ -1,0 +1,16 @@
+{
+  "title": "gamex-accelerator",
+  "description": "Mentor and advisor for gaming-focused startup accelerator. Helping early-stage founders with product strategy and fundraising.",
+  "category": "advisory",
+  "year": "2024",
+  "status": "active",
+  "tags": ["Accelerator", "Mentorship", "Gaming", "Startups"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "15 companies mentored",
+    "Total funding raised: $30M+",
+    "2 unicorn outcomes"
+  ],
+  "sortOrder": 7
+}

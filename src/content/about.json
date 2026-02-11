@@ -1,0 +1,40 @@
+{
+  "name": "Jacob",
+  "role": "Venture Capitalist",
+  "bio": "게임과 AI 산업에 집중하는 벤처 캐피탈리스트입니다. 혁신적인 스타트업을 발굴하고, 창업자들과 함께 다음 세대의 엔터테인먼트를 만들어가고 있습니다.",
+  "profileImage": null,
+  "stats": [
+    { "label": "년 경력", "value": "8+" },
+    { "label": "투자 건수", "value": "20+" },
+    { "label": "엑싯", "value": "5" }
+  ],
+  "skills": [
+    {
+      "category": "투자",
+      "items": ["VC", "M&A", "Due Diligence", "Portfolio Management"]
+    },
+    {
+      "category": "비즈니스",
+      "items": ["Biz-Dev", "Strategy", "Partnerships", "Growth"]
+    },
+    {
+      "category": "산업",
+      "items": ["Gaming", "AI/ML", "Web3", "Mobile"]
+    },
+    {
+      "category": "개발",
+      "items": ["React", "Next.js", "TypeScript", "Node.js"]
+    }
+  ],
+  "journeyTitle": "여정",
+  "journeyParagraphs": [
+    "스타트업 생태계에서 8년 이상의 경험을 쌓아왔습니다. 초기 단계 스타트업에서 시작해, 사업 개발과 M&A를 거쳐 현재는 벤처 투자에 집중하고 있습니다.",
+    "게임 산업에 대한 깊은 이해와 AI 기술에 대한 통찰을 바탕으로, 두 영역이 만나는 지점에서 새로운 기회를 발굴하고 있습니다.",
+    "단순한 투자자를 넘어, 창업자들의 파트너로서 함께 성장하는 것을 목표로 합니다."
+  ],
+  "contactEmail": "hello@jacob.com",
+  "socialLinks": [
+    { "label": "LinkedIn", "url": "https://linkedin.com" },
+    { "label": "Twitter", "url": "https://twitter.com" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "ai-gaming-ventures",
+  "description": "Early-stage fund focused on startups at the intersection of AI and gaming. Leading investments in generative AI for game development, AI-powered NPCs, and procedural content generation.",
+  "category": "investment",
+  "year": "2023",
+  "status": "active",
+  "tags": ["Fund", "AI", "Gaming", "Seed Stage"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "10+ portfolio companies",
+    "$50M+ in follow-on funding raised by portfolio",
+    "2 exits to date"
+  ],
+  "sortOrder": 0
+}

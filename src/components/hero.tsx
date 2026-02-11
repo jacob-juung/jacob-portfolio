@@ -3,8 +3,13 @@
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import type { HeroContent } from "@/lib/content";
 
-export function Hero() {
+interface HeroProps {
+  data: HeroContent;
+}
+
+export function Hero({ data }: HeroProps) {
   const t = useTranslations("hero");
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -57,28 +62,28 @@ export function Hero() {
           variants={itemVariants}
           className="text-sm font-medium tracking-widest uppercase text-text-tertiary mb-6"
         >
-          {t("eyebrow")}
+          {data.eyebrow}
         </motion.p>
 
         <motion.h1
           variants={itemVariants}
           className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-text-primary mb-4"
         >
-          {t("name")}
+          {data.name}
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="text-2xl sm:text-3xl font-medium text-text-secondary mb-6"
         >
-          {t("title")}
+          {data.title}
         </motion.p>
 
         <motion.p
           variants={itemVariants}
           className="text-lg text-text-secondary leading-relaxed max-w-xl mb-10"
         >
-          {t("tagline")}
+          {data.tagline}
         </motion.p>
 
         <motion.div
@@ -89,14 +94,14 @@ export function Hero() {
             href="#contact"
             className="group relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-bg-primary bg-text-primary rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5"
           >
-            <span className="relative z-10">{t("cta.contact")}</span>
+            <span className="relative z-10">{data.ctaContactLabel}</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
           </a>
           <a
             href="/resume.pdf"
             className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-text-primary border-2 border-border-secondary rounded-full transition-all duration-300 hover:border-text-primary hover:bg-bg-secondary hover:-translate-y-0.5"
           >
-            {t("cta.resume")}
+            {data.ctaResumeLabel}
           </a>
         </motion.div>
 

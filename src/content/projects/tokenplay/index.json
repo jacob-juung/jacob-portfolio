@@ -1,0 +1,16 @@
+{
+  "title": "tokenplay",
+  "description": "Web3 gaming infrastructure providing on-chain game state management and player-owned economies. Technical advisor role.",
+  "category": "advisory",
+  "year": "2022",
+  "status": "active",
+  "tags": ["Web3", "Blockchain", "Gaming", "Infrastructure"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "Integrated by 20+ games",
+    "Processing 1M+ transactions daily",
+    "Cross-chain compatibility"
+  ],
+  "sortOrder": 5
+}
