@@ -34,13 +34,13 @@ export function AboutClient({ data }: Props) {
     },
   };
 
-  return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="space-y-16 py-8"
-    >
+   return (
+     <motion.div
+       variants={containerVariants}
+       initial={false}
+       animate="visible"
+       className="space-y-16 py-8"
+     >
       <section className="grid md:grid-cols-[200px_1fr] gap-10 items-start">
         <motion.div
           variants={itemVariants}

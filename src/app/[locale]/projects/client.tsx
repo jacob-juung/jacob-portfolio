@@ -201,13 +201,13 @@ export function ProjectsClient({ projects }: Props) {
 
   return (
     <div className="py-8">
-      <motion.div
-        ref={headerRef}
-        initial={{ opacity: 0, y: 20 }}
-        animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
-        className="mb-8"
-      >
+       <motion.div
+         ref={headerRef}
+         initial={false}
+         animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+         className="mb-8"
+       >
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">
           {t("title")}
         </h1>

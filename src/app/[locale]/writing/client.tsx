@@ -64,13 +64,13 @@ export function WritingPageClient({ posts, allTags }: WritingPageClientProps) {
     },
   };
 
-  return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="py-8 space-y-8"
-    >
+   return (
+     <motion.div
+       variants={containerVariants}
+       initial={false}
+       animate="visible"
+       className="py-8 space-y-8"
+     >
       <motion.div variants={itemVariants}>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">
           {t("title")}

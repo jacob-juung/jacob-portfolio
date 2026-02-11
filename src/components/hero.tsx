@@ -52,12 +52,12 @@ export function Hero({ data }: HeroProps) {
       <div className="absolute top-1/4 -right-20 w-80 h-80 bg-accent/[0.03] dark:bg-accent/[0.05] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -left-20 w-60 h-60 bg-accent/[0.02] dark:bg-accent/[0.03] rounded-full blur-3xl pointer-events-none" />
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative z-10 max-w-2xl mx-auto w-full"
-      >
+       <motion.div
+         variants={containerVariants}
+         initial={false}
+         animate="visible"
+         className="relative z-10 max-w-2xl mx-auto w-full"
+       >
         <motion.p
           variants={itemVariants}
           className="text-sm font-medium tracking-widest uppercase text-text-tertiary mb-6"

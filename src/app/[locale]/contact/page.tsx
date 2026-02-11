@@ -319,13 +319,13 @@ export default function ContactPage() {
     },
   };
 
-  return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="space-y-12 py-8"
-    >
+   return (
+     <motion.div
+       variants={containerVariants}
+       initial={false}
+       animate="visible"
+       className="space-y-12 py-8"
+     >
       <motion.div variants={itemVariants}>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary mb-4">
           {t("title")}
