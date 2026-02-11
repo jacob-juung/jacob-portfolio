@@ -1,4 +1,3 @@
-import { reader } from "./keystatic";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -63,6 +62,28 @@ export interface BlogPost {
 
 export type BlogPostMeta = Omit<BlogPost, "content">;
 
+function contentDir(...segments: string[]) {
+  return path.join(process.cwd(), "src", "content", ...segments);
+}
+
+async function readJson<T>(filePath: string): Promise<T | null> {
+  try {
+    const raw = await fs.readFile(filePath, "utf-8");
+    return JSON.parse(raw) as T;
+  } catch {
+    return null;
+  }
+}
+
+async function listDirs(dirPath: string): Promise<string[]> {
+  try {
+    const entries = await fs.readdir(dirPath, { withFileTypes: true });
+    return entries.filter((e) => e.isDirectory()).map((e) => e.name);
+  } catch {
+    return [];
+  }
+}
+
 function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200;
   const words = content.trim().split(/\s+/).length;
@@ -70,7 +91,7 @@ function calculateReadingTime(content: string): number {
 }
 
 export async function getHero(): Promise<HeroContent> {
-  const data = await reader.singletons.hero.read();
+  const data = await readJson<HeroContent>(contentDir("hero.json"));
   if (!data) {
     return {
       eyebrow: "Venture Capitalist",
@@ -81,18 +102,11 @@ export async function getHero(): Promise<HeroContent> {
       ctaResumeLabel: "Resume",
     };
   }
-  return {
-    eyebrow: data.eyebrow || "",
-    name: data.name || "",
-    title: data.title || "",
-    tagline: data.tagline || "",
-    ctaContactLabel: data.ctaContactLabel || "",
-    ctaResumeLabel: data.ctaResumeLabel || "",
-  };
+  return data;
 }
 
 export async function getAbout(): Promise<AboutContent> {
-  const data = await reader.singletons.about.read();
+  const data = await readJson<AboutContent>(contentDir("about.json"));
   if (!data) {
     return {
       name: "",
@@ -107,42 +121,27 @@ export async function getAbout(): Promise<AboutContent> {
       socialLinks: [],
     };
   }
-  return {
-    name: data.name || "",
-    role: data.role || "",
-    bio: data.bio || "",
-    profileImage: data.profileImage || null,
-    stats: data.stats.map((s) => ({ label: s.label || "", value: s.value || "" })),
-    skills: data.skills.map((s) => ({
-      category: s.category || "",
-      items: [...s.items],
-    })),
-    journeyTitle: data.journeyTitle || "",
-    journeyParagraphs: [...data.journeyParagraphs],
-    contactEmail: data.contactEmail || "",
-    socialLinks: data.socialLinks.map((l) => ({
-      label: l.label || "",
-      url: l.url || null,
-    })),
-  };
+  return data;
 }
 
 export async function getExperiences(): Promise<Experience[]> {
-  const slugs = await reader.collections.experiences.list();
+  const slugs = await listDirs(contentDir("experiences"));
   const entries = await Promise.all(
     slugs.map(async (slug) => {
-      const data = await reader.collections.experiences.read(slug);
+      const data = await readJson<Record<string, unknown>>(
+        contentDir("experiences", slug, "index.json")
+      );
       if (!data) return null;
       return {
         slug,
         company: slug,
-        role: data.role || "",
-        periodStart: data.periodStart || "",
-        periodEnd: data.periodEnd || "",
-        description: data.description || "",
-        skills: [...data.skills],
-        highlights: [...data.highlights],
-        sortOrder: data.sortOrder ?? 0,
+        role: (data.role as string) || "",
+        periodStart: (data.periodStart as string) || "",
+        periodEnd: (data.periodEnd as string) || "",
+        description: (data.description as string) || "",
+        skills: (data.skills as string[]) || [],
+        highlights: (data.highlights as string[]) || [],
+        sortOrder: (data.sortOrder as number) ?? 0,
       } satisfies Experience;
     })
   );
@@ -152,23 +151,25 @@ export async function getExperiences(): Promise<Experience[]> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  const slugs = await reader.collections.projects.list();
+  const slugs = await listDirs(contentDir("projects"));
   const entries = await Promise.all(
     slugs.map(async (slug) => {
-      const data = await reader.collections.projects.read(slug);
+      const data = await readJson<Record<string, unknown>>(
+        contentDir("projects", slug, "index.json")
+      );
       if (!data) return null;
       return {
         slug,
         title: slug,
-        description: data.description || "",
-        category: data.category as Project["category"],
-        year: data.year || "",
-        status: data.status as Project["status"],
-        tags: [...data.tags],
-        link: data.link || null,
-        image: data.image || null,
-        highlights: [...data.highlights],
-        sortOrder: data.sortOrder ?? 0,
+        description: (data.description as string) || "",
+        category: (data.category as Project["category"]) || "investment",
+        year: (data.year as string) || "",
+        status: (data.status as Project["status"]) || "active",
+        tags: (data.tags as string[]) || [],
+        link: (data.link as string) || null,
+        image: (data.image as string) || null,
+        highlights: (data.highlights as string[]) || [],
+        sortOrder: (data.sortOrder as number) ?? 0,
       } satisfies Project;
     })
   );
@@ -178,35 +179,45 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getAllPosts(): Promise<BlogPostMeta[]> {
-  const slugs = await reader.collections.posts.list();
+  const slugs = await listDirs(contentDir("posts"));
   const entries = await Promise.all(
     slugs.map(async (slug) => {
-      const data = await reader.collections.posts.read(slug);
-      if (!data || !data.published) return null;
-
-      const filePath = path.join(
-        process.cwd(),
-        "src/content/posts",
-        slug,
-        "index.mdoc"
-      );
-      let contentText = "";
+      const filePath = contentDir("posts", slug, "index.mdoc");
+      let raw = "";
       try {
-        const raw = await fs.readFile(filePath, "utf-8");
-        const frontmatterEnd = raw.indexOf("---", raw.indexOf("---") + 3);
-        contentText =
-          frontmatterEnd !== -1 ? raw.slice(frontmatterEnd + 3).trim() : raw;
+        raw = await fs.readFile(filePath, "utf-8");
       } catch {
-        contentText = "";
+        return null;
       }
+
+      const frontmatterMatch = raw.match(/^---\n([\s\S]*?)\n---/);
+      if (!frontmatterMatch) return null;
+
+      const fm = frontmatterMatch[1];
+      const get = (key: string) => {
+        const m = fm.match(new RegExp(`^${key}:\\s*['"]?(.+?)['"]?$`, "m"));
+        return m ? m[1].trim() : "";
+      };
+      const published = get("published") !== "false";
+      if (!published) return null;
+
+      const tagsMatch = fm.match(/tags:\n((?:\s*-\s*.+\n?)*)/);
+      const tags = tagsMatch
+        ? tagsMatch[1]
+            .split("\n")
+            .map((l) => l.replace(/^\s*-\s*/, "").trim())
+            .filter(Boolean)
+        : [];
+
+      const contentText = raw.slice(frontmatterMatch[0].length).trim();
 
       return {
         slug,
         title: slug,
-        description: data.description || "",
-        date: data.date || "",
-        tags: [...data.tags],
-        published: data.published,
+        description: get("description"),
+        date: get("date"),
+        tags,
+        published,
         readingTime: calculateReadingTime(contentText),
       } satisfies BlogPostMeta;
     })
@@ -217,32 +228,41 @@ export async function getAllPosts(): Promise<BlogPostMeta[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const data = await reader.collections.posts.read(slug);
-  if (!data) return null;
-
-  const filePath = path.join(
-    process.cwd(),
-    "src/content/posts",
-    slug,
-    "index.mdoc"
-  );
-  let contentText = "";
+  const filePath = contentDir("posts", slug, "index.mdoc");
+  let raw = "";
   try {
-    const raw = await fs.readFile(filePath, "utf-8");
-    const frontmatterEnd = raw.indexOf("---", raw.indexOf("---") + 3);
-    contentText =
-      frontmatterEnd !== -1 ? raw.slice(frontmatterEnd + 3).trim() : raw;
+    raw = await fs.readFile(filePath, "utf-8");
   } catch {
-    contentText = "";
+    return null;
   }
+
+  const frontmatterMatch = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!frontmatterMatch) return null;
+
+  const fm = frontmatterMatch[1];
+  const get = (key: string) => {
+    const m = fm.match(new RegExp(`^${key}:\\s*['"]?(.+?)['"]?$`, "m"));
+    return m ? m[1].trim() : "";
+  };
+  const published = get("published") !== "false";
+
+  const tagsMatch = fm.match(/tags:\n((?:\s*-\s*.+\n?)*)/);
+  const tags = tagsMatch
+    ? tagsMatch[1]
+        .split("\n")
+        .map((l) => l.replace(/^\s*-\s*/, "").trim())
+        .filter(Boolean)
+    : [];
+
+  const contentText = raw.slice(frontmatterMatch[0].length).trim();
 
   return {
     slug,
     title: slug,
-    description: data.description || "",
-    date: data.date || "",
-    tags: [...data.tags],
-    published: data.published,
+    description: get("description"),
+    date: get("date"),
+    tags,
+    published,
     content: contentText,
     readingTime: calculateReadingTime(contentText),
   };
