@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "Jacob",
+    "description": "Venture Capitalist focused on Gaming and AI"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "writing": "Writing",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Venture Capitalist",
+    "name": "Jacob",
+    "title": "At the Intersection of Gaming & AI",
+    "tagline": "Preparing for the birth of a new industry. I invest in innovative startups combining gaming and AI, partnering with founders building the next generation of entertainment.",
+    "cta": {
+      "contact": "Get in Touch",
+      "resume": "View Resume"
+    },
+    "scroll": "Scroll"
+  },
+  "home": {
+    "greeting": "Hi, I'm Jacob.",
+    "tagline": "I am preparing for the birth of a new industry by combining gaming and AI.",
+    "role": "Venture Capitalist",
+    "expertise": "Investment, Biz-Dev, M&A, Gaming, Web Development, Mobile"
+  },
+  "about": {
+    "name": "Jacob",
+    "role": "Venture Capitalist",
+    "bio": "A Venture Capitalist focused on gaming and AI industries. I discover innovative startups and partner with founders to build the next generation of entertainment.",
+    "stats": {
+      "title": "By the Numbers",
+      "experience": "Years Experience",
+      "investments": "Investments",
+      "exits": "Exits"
+    },
+    "skills": {
+      "title": "Expertise",
+      "investment": "Investment",
+      "business": "Business",
+      "tech": "Industry",
+      "development": "Development"
+    },
+    "journey": {
+      "title": "Journey",
+      "p1": "Over 8 years of experience in the startup ecosystem. Starting from early-stage startups, through business development and M&A, I now focus on venture investing.",
+      "p2": "With deep understanding of the gaming industry and insights into AI technology, I discover new opportunities where these two domains intersect.",
+      "p3": "Beyond being just an investor, I aim to grow together with founders as a true partner."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Send Email"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "My journey in the startup ecosystem. From developer to product, business development, and venture investing.",
+    "present": "Present",
+    "current": "Current",
+    "highlights": "Key Achievements",
+    "expand": "Show more",
+    "collapse": "Show less"
+  },
+  "writing": {
+    "title": "Writing",
+    "description": "Thoughts on gaming, AI, startups, and technology.",
+    "empty": "No posts yet.",
+    "searchPlaceholder": "Search posts...",
+    "allTags": "All",
+    "noResults": "No results found.",
+    "minRead": "min",
+    "backToList": "Back to list",
+    "toc": "Table of Contents",
+    "prevPost": "Previous",
+    "nextPost": "Next"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Investments, advisory roles, and hands-on projects. A collection of experiences across gaming and AI industries.",
+    "empty": "No projects found.",
+    "highlights": "Key Achievements",
+    "expand": "Show details",
+    "collapse": "Hide details",
+    "filter": {
+      "all": "All"
+    },
+    "categories": {
+      "investment": "Investment",
+      "product": "Product",
+      "development": "Development",
+      "advisory": "Advisory"
+    },
+    "status": {
+      "active": "Active",
+      "exited": "Exited",
+      "completed": "Completed"
+    },
+    "stats": {
+      "totalProjects": "Total Projects",
+      "activeProjects": "Active",
+      "exits": "Exits",
+      "investments": "Investments"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Whether you have a project proposal, collaboration inquiry, or just want to say hello, I'd love to hear from you.",
+    "info": {
+      "title": "Contact Info",
+      "email": "Email"
+    },
+    "tabs": {
+      "contact": "Quick Message",
+      "proposal": "Project Proposal"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "hello@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Feel free to say anything...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Failed to send message. Please try again."
+    },
+    "proposal": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "company": "Company",
+      "companyPlaceholder": "Company name (optional)",
+      "email": "Email",
+      "emailPlaceholder": "hello@example.com",
+      "projectType": "Project Type",
+      "selectType": "Select a project type",
+      "types": {
+        "web": "Web Development",
+        "consulting": "Consulting",
+        "collaboration": "Collaboration",
+        "other": "Other"
+      },
+      "budget": "Estimated Budget",
+      "budgets": {
+        "under50k": "Under $50K",
+        "50to100k": "$50K - $100K",
+        "100to200k": "$100K - $200K",
+        "over200k": "Over $200K"
+      },
+      "timeline": "Preferred Timeline",
+      "timelinePlaceholder": "e.g., Starting March 2024, 3 months",
+      "description": "Project Description",
+      "descriptionPlaceholder": "Please describe your project in detail. Include goals, expected outcomes, and any specific requirements.",
+      "attachment": "Attachment",
+      "attachmentNote": "PDF, DOC, PNG, JPG files (max 10MB)",
+      "send": "Submit Proposal",
+      "sending": "Sending...",
+      "success": "Proposal submitted successfully! I'll review and get back to you.",
+      "error": "Failed to submit proposal. Please try again."
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "English"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "Jacob",
+    "description": "게임과 AI 산업에 집중하는 벤처 캐피탈리스트"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "experience": "경력",
+    "writing": "글",
+    "projects": "프로젝트",
+    "contact": "연락"
+  },
+  "hero": {
+    "eyebrow": "Venture Capitalist",
+    "name": "Jacob",
+    "title": "게임과 AI의 교차점에서",
+    "tagline": "새로운 산업의 탄생을 준비하고 있습니다. 게임과 AI를 결합한 혁신적인 스타트업에 투자하며, 다음 세대의 엔터테인먼트를 만들어가는 창업자들과 함께합니다.",
+    "cta": {
+      "contact": "연락하기",
+      "resume": "이력서 보기"
+    },
+    "scroll": "스크롤"
+  },
+  "home": {
+    "greeting": "안녕하세요, Jacob입니다.",
+    "tagline": "게임과 AI를 결합한 새로운 산업의 탄생을 준비하고 있습니다.",
+    "role": "Venture Capitalist",
+    "expertise": "Investment, Biz-Dev, M&A, Gaming, Web Development, Mobile"
+  },
+  "about": {
+    "name": "Jacob",
+    "role": "Venture Capitalist",
+    "bio": "게임과 AI 산업에 집중하는 벤처 캐피탈리스트입니다. 혁신적인 스타트업을 발굴하고, 창업자들과 함께 다음 세대의 엔터테인먼트를 만들어가고 있습니다.",
+    "stats": {
+      "title": "숫자로 보는 경력",
+      "experience": "년 경력",
+      "investments": "투자 건수",
+      "exits": "엑싯"
+    },
+    "skills": {
+      "title": "전문 분야",
+      "investment": "투자",
+      "business": "비즈니스",
+      "tech": "산업",
+      "development": "개발"
+    },
+    "journey": {
+      "title": "여정",
+      "p1": "스타트업 생태계에서 8년 이상의 경험을 쌓아왔습니다. 초기 단계 스타트업에서 시작해, 사업 개발과 M&A를 거쳐 현재는 벤처 투자에 집중하고 있습니다.",
+      "p2": "게임 산업에 대한 깊은 이해와 AI 기술에 대한 통찰을 바탕으로, 두 영역이 만나는 지점에서 새로운 기회를 발굴하고 있습니다.",
+      "p3": "단순한 투자자를 넘어, 창업자들의 파트너로서 함께 성장하는 것을 목표로 합니다."
+    },
+    "contact": {
+      "title": "연락처",
+      "email": "이메일 보내기"
+    }
+  },
+  "experience": {
+    "title": "경력",
+    "description": "스타트업 생태계에서의 여정. 개발자에서 시작해 프로덕트, 사업개발, 그리고 벤처 투자까지.",
+    "present": "현재",
+    "current": "현재",
+    "highlights": "주요 성과",
+    "expand": "자세히 보기",
+    "collapse": "접기"
+  },
+  "writing": {
+    "title": "글",
+    "description": "게임, AI, 스타트업, 그리고 기술에 대한 생각들을 공유합니다.",
+    "empty": "아직 작성된 글이 없습니다.",
+    "searchPlaceholder": "글 검색...",
+    "allTags": "전체",
+    "noResults": "검색 결과가 없습니다.",
+    "minRead": "분",
+    "backToList": "목록으로",
+    "toc": "목차",
+    "prevPost": "이전 글",
+    "nextPost": "다음 글"
+  },
+  "projects": {
+    "title": "프로젝트",
+    "description": "투자, 자문, 그리고 직접 참여한 프로젝트들. 게임과 AI 산업에서의 다양한 경험을 담았습니다.",
+    "empty": "해당하는 프로젝트가 없습니다.",
+    "highlights": "주요 성과",
+    "expand": "자세히 보기",
+    "collapse": "접기",
+    "filter": {
+      "all": "전체"
+    },
+    "categories": {
+      "investment": "투자",
+      "product": "프로덕트",
+      "development": "개발",
+      "advisory": "자문"
+    },
+    "status": {
+      "active": "진행중",
+      "exited": "엑싯",
+      "completed": "완료"
+    },
+    "stats": {
+      "totalProjects": "전체 프로젝트",
+      "activeProjects": "진행중",
+      "exits": "엑싯",
+      "investments": "투자"
+    }
+  },
+  "contact": {
+    "title": "연락하기",
+    "description": "프로젝트 제안, 협업 문의, 또는 간단한 인사도 환영합니다. 편하게 연락주세요.",
+    "info": {
+      "title": "연락처",
+      "email": "이메일"
+    },
+    "tabs": {
+      "contact": "간단 문의",
+      "proposal": "프로젝트 제안"
+    },
+    "form": {
+      "name": "이름",
+      "namePlaceholder": "홍길동",
+      "email": "이메일",
+      "emailPlaceholder": "hello@example.com",
+      "message": "메시지",
+      "messagePlaceholder": "무엇이든 편하게 말씀해주세요...",
+      "send": "보내기",
+      "sending": "보내는 중...",
+      "success": "메시지가 전송되었습니다. 빠른 시일 내에 답변드리겠습니다!",
+      "error": "메시지 전송에 실패했습니다. 다시 시도해주세요."
+    },
+    "proposal": {
+      "name": "이름",
+      "namePlaceholder": "홍길동",
+      "company": "회사명",
+      "companyPlaceholder": "회사명 (선택)",
+      "email": "이메일",
+      "emailPlaceholder": "hello@example.com",
+      "projectType": "프로젝트 유형",
+      "selectType": "유형을 선택해주세요",
+      "types": {
+        "web": "웹 개발",
+        "consulting": "컨설팅",
+        "collaboration": "협업",
+        "other": "기타"
+      },
+      "budget": "예상 예산",
+      "budgets": {
+        "under50k": "5천만원 미만",
+        "50to100k": "5천만원 ~ 1억원",
+        "100to200k": "1억원 ~ 2억원",
+        "over200k": "2억원 이상"
+      },
+      "timeline": "희망 일정",
+      "timelinePlaceholder": "예: 2024년 3월 시작, 3개월 예상",
+      "description": "프로젝트 설명",
+      "descriptionPlaceholder": "프로젝트에 대해 자세히 설명해주세요. 목표, 기대하는 결과, 특별한 요구사항 등을 포함해주시면 더 정확한 상담이 가능합니다.",
+      "attachment": "첨부 파일",
+      "attachmentNote": "PDF, DOC, PNG, JPG 파일 (최대 10MB)",
+      "send": "제안서 보내기",
+      "sending": "보내는 중...",
+      "success": "제안서가 전송되었습니다. 검토 후 연락드리겠습니다!",
+      "error": "제안서 전송에 실패했습니다. 다시 시도해주세요."
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "theme": {
+    "light": "라이트",
+    "dark": "다크"
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "English"
+  }
+}
