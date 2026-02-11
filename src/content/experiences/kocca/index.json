@@ -1,0 +1,15 @@
+{
+  "company": "kocca",
+  "role": "Project Intern",
+  "periodStart": "2009.08",
+  "periodEnd": "2010.07",
+  "description": "한국콘텐츠진흥원(KOCCA)에서 콘텐츠 스타트업 수출금융 지원, 게임백서 리서치, 국정감사 지원, 행사 운영 등을 수행하며 게임·콘텐츠 산업의 기초를 다짐.",
+  "skills": ["Industry Research", "Government Relations", "Event Coordination", "Content Industry"],
+  "highlights": [
+    "수출금융지원부에서 콘텐츠 스타트업 금융 지원 프로그램 보조",
+    "<한국 게임백서 2009> 리서치 및 분석 수행",
+    "국정감사 기간 감사실 운영·행정 지원",
+    "<대한민국 콘텐츠 대상 2009> 행사 기획 및 로지스틱스 총괄"
+  ],
+  "sortOrder": 3
+}

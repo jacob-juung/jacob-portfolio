@@ -1,0 +1,16 @@
+{
+  "title": "kakao-growth-share-game-fund",
+  "description": "2016년 결성된 카카오 성장 공유 게임 펀드. 리드 펀드매니저로서 게임 스타트업 투자 전략 수립 및 집행.",
+  "category": "product",
+  "year": "2016",
+  "status": "active",
+  "tags": ["Fund Management", "Gaming", "Venture Capital"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "게임 전문 벤처 펀드 결성 및 운용",
+    "리드 펀드매니저로서 투자 전략 수립",
+    "Shift Up, Krafton 등 핵심 포트폴리오 투자 집행"
+  ],
+  "sortOrder": 5
+}

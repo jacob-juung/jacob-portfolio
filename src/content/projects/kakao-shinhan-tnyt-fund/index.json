@@ -1,0 +1,15 @@
+{
+  "title": "kakao-shinhan-tnyt-fund",
+  "description": "2020년 결성된 카카오-신한 1호 TNYT 펀드. 리드 펀드매니저로서 게임 및 콘텐츠 스타트업 투자.",
+  "category": "product",
+  "year": "2020",
+  "status": "active",
+  "tags": ["Fund Management", "Gaming", "Venture Capital", "Content"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "카카오벤처스-신한 합작 펀드 결성",
+    "리드 펀드매니저로서 투자 집행 및 포트폴리오 관리"
+  ],
+  "sortOrder": 6
+}

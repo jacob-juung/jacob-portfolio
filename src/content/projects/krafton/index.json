@@ -1,0 +1,16 @@
+{
+  "title": "krafton",
+  "description": "PUBG로 알려진 글로벌 게임 기업. 카카오벤처스 포트폴리오로 투자에 참여.",
+  "category": "investment",
+  "year": "2017",
+  "status": "active",
+  "tags": ["Gaming", "PUBG", "Global", "Portfolio"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "카카오벤처스 포트폴리오",
+    "2021년 코스피 상장",
+    "PUBG, inZOI 등 글로벌 IP 보유"
+  ],
+  "sortOrder": 1
+}

@@ -1,0 +1,15 @@
+{
+  "company": "ncsoft",
+  "role": "Senior Project Development Manager",
+  "periodStart": "2010.07",
+  "periodEnd": "2014.10",
+  "description": "NCSOFT에서 캐주얼 게임부터 대작 프로젝트까지 다양한 게임의 런칭과 라이브 서비스를 담당. 블레이드 & 소울의 국내 런칭을 리드하고, 텐센트(중국)·가레나(대만)와의 글로벌 런칭 및 라이브 운영을 수행.",
+  "skills": ["Game Launching", "Live Operations", "Global Publishing", "Cross-border Partnership"],
+  "highlights": [
+    "캐주얼 게임(드래고니카, 펀치몬스터, 러브비트) 라이브 서비스 및 리텐션 최적화",
+    "블레이드 & 소울 국내 런칭 리드 — 유저 획득, 리텐션, 재방문 전략 수행",
+    "소울 파티, 공식 PvP 토너먼트 등 혁신적 포맷 도입으로 문화적 영향력 확대",
+    "블레이드 & 소울 중국(텐센트), 대만(가레나) 글로벌 런칭 및 현지 운영 관리"
+  ],
+  "sortOrder": 2
+}

@@ -1,40 +1,35 @@
 {
   "name": "Jacob",
-  "role": "Venture Capitalist",
-  "bio": "게임과 AI 산업에 집중하는 벤처 캐피탈리스트입니다. 혁신적인 스타트업을 발굴하고, 창업자들과 함께 다음 세대의 엔터테인먼트를 만들어가고 있습니다.",
+  "role": "Game Investor @ Kakao Ventures",
+  "bio": "카카오벤처스에서 게임 분야 투자를 리드하고 있습니다. NCSOFT, 4:33 Creative Lab을 거쳐 VC로 전환한 뒤, 10년 이상 게임 산업 전반에 걸친 경험을 바탕으로 펀드 운용, 투자 심사, 포트폴리오 관리 및 엑싯을 수행해왔습니다.",
   "profileImage": null,
   "stats": [
-    { "label": "년 경력", "value": "8+" },
-    { "label": "투자 건수", "value": "20+" },
-    { "label": "엑싯", "value": "5" }
+    { "label": "년 경력", "value": "15+" },
+    { "label": "운용 펀드", "value": "2" },
+    { "label": "대표 포트폴리오", "value": "5+" }
   ],
   "skills": [
     {
       "category": "투자",
-      "items": ["VC", "M&A", "Due Diligence", "Portfolio Management"]
+      "items": ["Fund Management", "Due Diligence", "Portfolio Management", "Exit Strategy"]
+    },
+    {
+      "category": "게임 산업",
+      "items": ["Live Service Operations", "Game Launching", "Business Development", "Publishing"]
     },
     {
       "category": "비즈니스",
-      "items": ["Biz-Dev", "Strategy", "Partnerships", "Growth"]
-    },
-    {
-      "category": "산업",
-      "items": ["Gaming", "AI/ML", "Web3", "Mobile"]
-    },
-    {
-      "category": "개발",
-      "items": ["React", "Next.js", "TypeScript", "Node.js"]
+      "items": ["Fundraising", "산업 리서치", "행사 기획 및 관리", "Partnership"]
     }
   ],
   "journeyTitle": "여정",
   "journeyParagraphs": [
-    "스타트업 생태계에서 8년 이상의 경험을 쌓아왔습니다. 초기 단계 스타트업에서 시작해, 사업 개발과 M&A를 거쳐 현재는 벤처 투자에 집중하고 있습니다.",
-    "게임 산업에 대한 깊은 이해와 AI 기술에 대한 통찰을 바탕으로, 두 영역이 만나는 지점에서 새로운 기회를 발굴하고 있습니다.",
-    "단순한 투자자를 넘어, 창업자들의 파트너로서 함께 성장하는 것을 목표로 합니다."
+    "KOCCA(한국콘텐츠진흥원)에서 게임 산업의 첫 발을 내딛었습니다. 게임백서 리서치와 콘텐츠 스타트업 수출금융 지원 업무를 통해 산업의 구조를 이해하기 시작했습니다.",
+    "NCSOFT에서 4년간 드래고니카, 블레이드 & 소울 등의 프로젝트 런칭과 라이브 서비스를 경험했습니다. 텐센트(중국), 가레나(대만)와의 글로벌 퍼블리싱도 직접 수행하며 게임 비즈니스의 전 과정을 체득했습니다.",
+    "4:33 Creative Lab에서 프로젝트 매니저와 퍼블리싱 BD를 거친 뒤, 2016년부터 카카오벤처스에 합류해 게임 전문 벤처 투자자로 일하고 있습니다. Shift Up, Krafton 등 대표 포트폴리오를 구축하며 게임 산업의 미래를 함께 만들어가고 있습니다."
   ],
-  "contactEmail": "hello@jacob.com",
+  "contactEmail": "jacob@kakaoventures.co.kr",
   "socialLinks": [
-    { "label": "LinkedIn", "url": "https://linkedin.com" },
-    { "label": "Twitter", "url": "https://twitter.com" }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ji-woong-jacob-kim/" }
   ]
 }

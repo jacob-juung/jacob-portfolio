@@ -1,0 +1,14 @@
+{
+  "title": "gpun",
+  "description": "카카오벤처스 게임 포트폴리오. 게임 스타트업 투자 및 성장 지원.",
+  "category": "investment",
+  "year": "2019",
+  "status": "active",
+  "tags": ["Gaming", "Startup", "Portfolio"],
+  "link": null,
+  "image": null,
+  "highlights": [
+    "카카오벤처스 게임 펀드를 통한 투자"
+  ],
+  "sortOrder": 3
+}
